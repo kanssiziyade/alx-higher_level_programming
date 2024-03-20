@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-import sys
-if __name__ == '__main__':
-argv = sys.argv[1:]
-sum = 0
-for arg in argv:
-sum += int(arg)
-print("{}".format(sum))
+
+if __name__ == "__main__":
+    import sys
+    total_number_of_args = len(sys.argv)
+    result = 0
+
+    sys.argv.pop(0)
+    for item in sys.argv:
+        result += int(item)
+
+    print("{:d}".format(result))
